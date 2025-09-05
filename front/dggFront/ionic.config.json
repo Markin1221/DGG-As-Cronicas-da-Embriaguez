@@ -1,0 +1,7 @@
+{
+  "name": "dggFront",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
