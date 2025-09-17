@@ -9,6 +9,7 @@ def atacar(atacante, alvo):
 
 #-->Função para os Itens
 
+<<<<<<< Updated upstream
 def usar_item(jogador,item):
     
     
@@ -28,6 +29,12 @@ def usar_item(jogador,item):
 #         return self.nome
     
 # class Item(models.Model):
+=======
+def usar_item(jogardor,item):
+    
+
+#    class Item(models.Model):
+>>>>>>> Stashed changes
 #     nome = models.CharField(max_length=100)
 #     bonus_forca = models.IntegerField(default=0)
 #     bonus_defesa = models.IntegerField(default=0)
@@ -39,4 +46,21 @@ def usar_item(jogador,item):
     
 #     def __str__(self):
 #         return self.nome
+<<<<<<< Updated upstream
     
+=======
+
+
+
+# class Personagem(models.Model):
+#     nome = models.CharField(max_length=100)
+#     nivel = models.IntegerField(default=1)
+#     vida = models.IntegerField(default=40)
+#     forca = models.IntegerField(default=5)
+#     defesa = models.IntegerField(default=5)
+#     velocidade = models.IntegerField(default=10)
+#     magia = models.IntegerField(default=5)
+    
+#     def __str__(self):
+#         return self.nome
+>>>>>>> Stashed changes
