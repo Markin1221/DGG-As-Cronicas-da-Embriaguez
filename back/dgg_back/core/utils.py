@@ -13,7 +13,7 @@ def usar_item(jogador,item):
     
     
     jogador["vida"] += item["bonus_vida"]
-    jogador["forca"] += item["bonus_forca"]
+    
     
 #     class Personagem(models.Model):
 #     nome = models.CharField(max_length=100)
