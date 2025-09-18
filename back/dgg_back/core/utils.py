@@ -1,3 +1,4 @@
+import random
 #--> Função para Atacar 
 
 def atacar(atacante, alvo):
@@ -12,7 +13,33 @@ def atacar(atacante, alvo):
 def usar_item(jogador,item):
     
     jogador["vida"] += item["bonus_vida"]
+    jogador["forca"] += item["bonus_forca"]
+    jogador["defesa"] += item["bonus_defesa"]
+    jogador["agilidade"] += item["bonus_agilidade"]
+    jogador["magia"] += item["bonus_magia"]
+    print(f"{jogador['nome']} usou {item['nome']} e recebeu os bônus!")
     
+
+def fugir(jogador,inimigo):
+    if jogador["agilidade"] > inimigo["agilidade"]:
+        random_chance = random.randint(1, 100)
+        if random_chance <= 85:  # 85% de chance de sucesso
+            print(f"{jogador['nome']} conseguiu fugir de {inimigo['nome']}!")
+            return True
+        else:
+            print(f"{jogador['nome']} não conseguiu fugir de {inimigo['nome']}!")
+            return False
+        
+        
+    else:
+        random_chance = random.randint(1, 100)
+        if random_chance <= 60:  # 60% de chance de sucesso
+            print(f"{jogador['nome']} conseguiu fugir de {inimigo['nome']}!")
+            return True
+        else:
+            print(f"{jogador['nome']} não conseguiu fugir de {inimigo['nome']}!")
+            return False
+
 
 #    class Item(models.Model):
 #     nome = models.CharField(max_length=100)
