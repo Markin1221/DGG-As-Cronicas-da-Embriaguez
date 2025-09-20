@@ -19,6 +19,7 @@ def usar_item(jogador,item):
     jogador["magia"] += item["bonus_magia"]
     print(f"{jogador['nome']} usou {item['nome']} e recebeu os bônus!")
     
+#-->Função de fugir 
 
 def fugir(jogador,inimigo):
     if jogador["agilidade"] > inimigo["agilidade"]:
