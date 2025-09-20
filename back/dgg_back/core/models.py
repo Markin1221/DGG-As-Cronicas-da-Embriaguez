@@ -38,3 +38,11 @@ class Bebida(models.Model):
     def __str__(self):
         return self.nome
 
+class ataque(models.Model):
+    nome = models.CharField(max_length=100)
+    dano = models.IntegerField(default=0)
+    descricao = models.TextField()
+    tipo = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.nome
