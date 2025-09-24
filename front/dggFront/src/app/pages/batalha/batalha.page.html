@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="ladoInimigo">
+  <!-- <div class="ladoInimigo">
     <div class="barra-container">
       <div class="nome">Inimigo</div>
       <div class="barraDeVida" id="inimigo"></div>
@@ -17,7 +17,7 @@
   </div>
 
   <!-- Bêbado -->
-  <div class="ladoBebado">
+  <!-- <div class="ladoBebado">
     <div class="caraBebadi">
       <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png" alt="Bebado" />
     </div>
@@ -46,5 +46,16 @@
       </div> 
       }  
     </div>
-  </div>
+  </div>  -->
+
+  <!-- src/app/pages/battle/battle.page.html -->
+<ion-content>
+  <ion-button (click)="usarAtaque()">
+    Atacar
+  </ion-button>
+
+  <p>Dano causado: {{ dano }}</p>
+  <p>Vida inimigo: {{ vidaInimigo }}</p>
+</ion-content>
+
 </ion-content>

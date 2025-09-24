@@ -12,7 +12,19 @@ class Personagem(models.Model):
     
     def __str__(self):
         return self.nome
+
+class inimigo(models.Model):
+    nome = models.CharField(max_length=100)
+    nivel = models.IntegerField(default=1)
+    vida = models.IntegerField(default=40)
+    forca = models.IntegerField(default=5)
+    defesa = models.IntegerField(default=5)
+    velocidade = models.IntegerField(default=10)
+    magia = models.IntegerField(default=5)
+    descricao = models.TextField()
     
+    def __str__(self):
+        return self.nome
 class Item(models.Model):
     nome = models.CharField(max_length=100)
     bonus_forca = models.IntegerField(default=0)

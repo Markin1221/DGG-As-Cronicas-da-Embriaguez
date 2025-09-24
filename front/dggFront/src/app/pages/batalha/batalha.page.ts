@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonButton, IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { BattleService } from '../../services/battle.service';
+
 
 @Component({
   selector: 'app-batalha',
@@ -12,8 +14,22 @@ import { IonButton, IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/a
 })
 export class BatalhaPage implements OnInit {
 
-  constructor() { }
+  dano: number = 0;
+  vidaInimigo: number = 0;
+  constructor(private battleService: BattleService) { }
+  usarAtaque(){
+    const personagemId = 1; // Substitua pelo ID real do personagem
+    const inimigoId = 1;
+    const ataqueId = 1; // Substitua pelo ID real do ataque
+    this.battleService.atacar(personagemId, inimigoId, ataqueId)
+    .subscribe((res:any) => {
+      this.dano = res.dano;
+      this.vidaInimigo = res.vidaInimigo;
 
+    }, (err: any) =>{
+      console.error('Erro ao realizar ataque:', err);
+    } );
+  }
   ngOnInit() {
   }
   mostrarAtaques = false;
